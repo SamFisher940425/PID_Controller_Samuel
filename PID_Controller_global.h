@@ -1,0 +1,12 @@
+#ifndef PID_CONTROLLER_GLOBAL_H
+#define PID_CONTROLLER_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(PID_CONTROLLER_LIBRARY)
+#  define PID_CONTROLLER_EXPORT Q_DECL_EXPORT
+#else
+#  define PID_CONTROLLER_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // PID_CONTROLLER_GLOBAL_H

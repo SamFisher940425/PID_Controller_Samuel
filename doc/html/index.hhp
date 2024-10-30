@@ -1,0 +1,58 @@
+[OPTIONS]
+Compiled file=PID_Controller_Manual.chm
+Compatibility=1.1
+Full-text search=Yes
+Contents file=index.hhc
+Default Window=main
+Default topic=index.html
+Index file=index.hhk
+Language=0x804 Chinese (PRC)
+Title=PID_Controller
+
+[WINDOWS]
+main="PID_Controller","index.hhc","index.hhk","index.html","index.html",,,,,0x23520,,0x10387e,,,,,,,,0
+
+[FILES]
+_p_i_d___controller__global_8h.html
+_p_i_d___controller__global_8h_source.html
+annotated.html
+class_p_i_d___controller-members.html
+class_p_i_d___controller.html
+classes.html
+files.html
+functions.html
+functions_func.html
+functions_vars.html
+globals.html
+globals_defs.html
+graph_legend.html
+index.html
+pid__controller_8cpp.html
+pid__controller_8cpp_source.html
+pid__controller_8h.html
+pid__controller_8h_source.html
+_p_i_d___controller__global_8h__dep__incl.gif
+_p_i_d___controller__global_8h__dep__incl.pdf
+_p_i_d___controller__global_8h__incl.gif
+_p_i_d___controller__global_8h__incl.pdf
+bc_s.png
+bdwn.png
+class_p_i_d___controller__coll__graph.gif
+class_p_i_d___controller__coll__graph.pdf
+closed.png
+graph_legend.gif
+nav_f.png
+nav_h.png
+open.png
+pid__controller_8cpp__incl.gif
+pid__controller_8cpp__incl.pdf
+pid__controller_8h__dep__incl.gif
+pid__controller_8h__dep__incl.pdf
+pid__controller_8h__incl.gif
+pid__controller_8h__incl.pdf
+sync_off.png
+sync_on.png
+tab_a.png
+tab_b.png
+tab_h.png
+tab_s.png

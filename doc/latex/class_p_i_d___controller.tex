@@ -1,0 +1,510 @@
+\hypertarget{class_p_i_d___controller}{}\doxysection{P\+I\+D\+\_\+\+Controller类 参考}
+\label{class_p_i_d___controller}\index{PID\_Controller@{PID\_Controller}}
+
+
+{\ttfamily \#include $<$pid\+\_\+controller.\+h$>$}
+
+
+
+P\+I\+D\+\_\+\+Controller 的协作图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{class_p_i_d___controller__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_p_i_d___controller_ae586b8be3e47514e131f0fd06ca99b7e}{P\+I\+D\+\_\+\+Controller}} (double KP, double KI, double KD, double K\+FF, double K\+F\+FB, double K\+F\+F\+\_\+A, double K\+F\+F\+B\+\_\+B, double Integral\+\_\+\+Max, double Integral\+\_\+\+Min, double Output\+\_\+\+Max, double Output\+\_\+\+Min)
+\begin{DoxyCompactList}\small\item\em P\+I\+D控制器构造函数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_p_i_d___controller_acf4a8ce65999127513a75b81c803f8de}{P\+I\+D\+\_\+\+Controller}} (double KP, double KI, double KD, double Integral\+\_\+\+Max, double Integral\+\_\+\+Min, double Output\+\_\+\+Max, double Output\+\_\+\+Min)
+\begin{DoxyCompactList}\small\item\em 不采用改进算法，传统\+P\+I\+D构造函数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_i_d___controller_a2e6caccbc2e15459c6e2269c60736110}{Clear}} ()
+\item 
+double \mbox{\hyperlink{class_p_i_d___controller_a2d3a204f4b6a3378be9a3f32073d73d3}{Incremental\+\_\+\+P\+ID}} (double Input, double Feedback)
+\begin{DoxyCompactList}\small\item\em 增量式\+P\+I\+D算法，结合梯形积分，积分抗饱和，微分先行，不完全前馈，不完全前馈增压等优化算法，当\+Kff=Kd且\+Kffb、\+Kff\+\_\+\+Alpha、\+Kffb\+\_\+\+Beta=0时，等效为传统\+P\+ID \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_p_i_d___controller_a8646e1ddd3322e785751a5f1933894b3}{Incremental\+\_\+\+P\+ID}} (double Input, double Feedback, double Differential\+\_\+\+Error)
+\begin{DoxyCompactList}\small\item\em 微分项误差(反馈量一阶导)可被传感器测量值时，微分项误差可用传感器数值代替，例如角度环的微分项误差为角速度，可用陀螺仪测得,使用时注意传感器反馈信号的极性 \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_p_i_d___controller_ac9f423f76ec456800798271ff73912a6}{Position\+\_\+\+P\+ID}} (double Input, double Feedback)
+\begin{DoxyCompactList}\small\item\em 位置式\+P\+I\+D，结合积分抗饱和，微分先行，不完全前馈，不完全前馈增压等优化算法，当\+Kff=Kd且\+Kffb、\+Kff\+\_\+\+Alpha、\+Kffb\+\_\+\+Beta=0时，等效为传统\+P\+ID \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_p_i_d___controller_a8c2bcc664791cbc62ded69c236ca75ed}{Position\+\_\+\+P\+ID}} (double Input, double Feedback, double Differential\+\_\+\+Error)
+\begin{DoxyCompactList}\small\item\em 与增量式注释同理 \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_p_i_d___controller_ac6ca779a84b2eb764e08b413a3297d4c}{Set\+\_\+\+Output}} (double Output)
+\begin{DoxyCompactList}\small\item\em 设定输出值，一般用于手动自动平滑切换 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_p_i_d___controller_a0707633a63d01277e5198c017f4a2e04}{Kp}} = 0
+\item 
+double \mbox{\hyperlink{class_p_i_d___controller_afb06b9ff3e4ee73f7cefd51d715e1ac2}{Ki}} = 0
+\item 
+double \mbox{\hyperlink{class_p_i_d___controller_aa2032fb8ff7e041bfad4f5fd0830101e}{Kd}} = 0
+\item 
+double \mbox{\hyperlink{class_p_i_d___controller_a69657b040d8ad1a3f1642ff50ef1a9fe}{Kff}} = 0
+\begin{DoxyCompactList}\small\item\em 前馈系数 \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_p_i_d___controller_a9873dae8ffedf237a4eead227a5d62d9}{Kffb}} = 0
+\begin{DoxyCompactList}\small\item\em 前馈增压系数 \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_p_i_d___controller_ad2dd7c8ccda2200077eebc1af96f21de}{Kff\+\_\+\+Alpha}} = 0
+\begin{DoxyCompactList}\small\item\em 不完全前馈系数，范围0$\sim$1，越大延缓作用越明显，为0时，等效不使用不完全前馈 \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_p_i_d___controller_a8a7dcaf582e039489fa82dd1f232f469}{Kffb\+\_\+\+Beta}} = 0
+\begin{DoxyCompactList}\small\item\em 不完全前馈增压系数，范围0$\sim$1，越大延缓作用越明显，为0时，等效不使用不完全前馈 \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_p_i_d___controller_a459b6a537e6809a7e0f0f312c1f9c64c}{Integ\+\_\+\+Max}} = 0
+\begin{DoxyCompactList}\small\item\em 积分上限，一般取本级\+P\+I\+D执行器正向最大输出 \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_p_i_d___controller_ad14666a5564a4c3c99b91b5ed5c42f8c}{Integ\+\_\+\+Min}} = 0
+\begin{DoxyCompactList}\small\item\em 积分下限，一般取本级\+P\+I\+D执行器负向最大输出 \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_p_i_d___controller_a80ea87861bccb7b64d78de53dfd693db}{Out\+\_\+\+Max}} = 0
+\begin{DoxyCompactList}\small\item\em 输出限幅，一般取本级\+P\+I\+D执行器正向最大输出 \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_p_i_d___controller_a58942ac25a3280f4f4a3a98e9b1573d1}{Out\+\_\+\+Min}} = 0
+\begin{DoxyCompactList}\small\item\em 输出限幅，一般取本级\+P\+I\+D执行器负向最大输出 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_p_i_d___controller_ac3d9bc4c7d890931d0f5b43b1ab29ac1}{Err}} \mbox{[}3\mbox{]} = \{0\}
+\begin{DoxyCompactList}\small\item\em 误差存储器，0脚标位置储存本次输入减反馈，1脚标为上次误差，2脚标为上上次误差 \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_p_i_d___controller_a1fe716c21ccd0440bf793ea2babf1ddb}{In}} \mbox{[}3\mbox{]} = \{0\}
+\begin{DoxyCompactList}\small\item\em 输入存储器，0脚标位置储存本次输入，1脚标为上次输入，2脚标为上上次输入 \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_p_i_d___controller_a9a60205b8b0a5e61659e87fee27faf3c}{Fb}} \mbox{[}3\mbox{]} = \{0\}
+\begin{DoxyCompactList}\small\item\em 反馈存储器，0脚标位置储存本次反馈，1脚标为上次反馈，2脚标为上上次反馈 \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_p_i_d___controller_adf3f3379511e27219bb9b085f21c10c2}{Position\+\_\+\+Integ\+\_\+\+Term}} \mbox{[}3\mbox{]} = \{0\}
+\begin{DoxyCompactList}\small\item\em 位置式\+P\+I\+D积分项储存器，0脚标位置储存输入项累加值，1脚标为本次积分项，2脚标为上次积分项 \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_p_i_d___controller_ab0a49a7058eaffdf83091d3d2eedb62a}{Diff\+\_\+\+Term}} \mbox{[}3\mbox{]} = \{0\}
+\begin{DoxyCompactList}\small\item\em 微分项储存器，0脚标位置储存本次微分项，1脚标位置储存上次微分项，2脚标位置储存上上次微分项 \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_p_i_d___controller_adea3e0ca4a0bf8f949f0accb3c15234a}{Ff\+\_\+\+Term}} \mbox{[}3\mbox{]} = \{0\}
+\begin{DoxyCompactList}\small\item\em 前馈项储存器，0脚标位置储存本次前馈项，1脚标位置储存上次前馈项，2脚标位置储存上上次微前馈项 \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_p_i_d___controller_a73ab9d2c698f0035bc2a5f482ae7154d}{Ffb\+\_\+\+Term}} \mbox{[}3\mbox{]} = \{0\}
+\begin{DoxyCompactList}\small\item\em 前馈增压项储存器，0脚标位置储存本次前馈增压项，1脚标位置储存上次前馈增压项，2脚标位置储存上上次前馈增压项 \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_p_i_d___controller_a991d202e3546ce2633292b70d06e2f7c}{Out}} = 0
+\item 
+double \mbox{\hyperlink{class_p_i_d___controller_a3f54c77b17f8c615cc5eb950b0ac01dc}{Delta\+\_\+\+Out}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+
+
+在文件 pid\+\_\+controller.\+h 第 6 行定义.
+
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{class_p_i_d___controller_ae586b8be3e47514e131f0fd06ca99b7e}\label{class_p_i_d___controller_ae586b8be3e47514e131f0fd06ca99b7e}} 
+\index{PID\_Controller@{PID\_Controller}!PID\_Controller@{PID\_Controller}}
+\index{PID\_Controller@{PID\_Controller}!PID\_Controller@{PID\_Controller}}
+\doxysubsubsection{\texorpdfstring{PID\_Controller()}{PID\_Controller()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily P\+I\+D\+\_\+\+Controller\+::\+P\+I\+D\+\_\+\+Controller (\begin{DoxyParamCaption}\item[{double}]{KP,  }\item[{double}]{KI,  }\item[{double}]{KD,  }\item[{double}]{K\+FF,  }\item[{double}]{K\+F\+FB,  }\item[{double}]{K\+F\+F\+\_\+A,  }\item[{double}]{K\+F\+F\+B\+\_\+B,  }\item[{double}]{Integral\+\_\+\+Max,  }\item[{double}]{Integral\+\_\+\+Min,  }\item[{double}]{Output\+\_\+\+Max,  }\item[{double}]{Output\+\_\+\+Min }\end{DoxyParamCaption})}
+
+
+
+P\+I\+D控制器构造函数 
+
+改进型\+P\+I\+D控制器构造函数 
+\begin{DoxyParams}{参数}
+{\em K\+P\+:比例系数} & \\
+\hline
+{\em K\+I\+:积分系数} & \\
+\hline
+{\em K\+D\+:微分系数} & \\
+\hline
+{\em K\+F\+F\+:前馈系数，与微分系数相等时，等效为传统的无微分先行和前馈\+P\+ID} & \\
+\hline
+{\em K\+F\+F\+B\+:前馈增压系数，为0时，等效不使用前馈增压} & \\
+\hline
+{\em K\+F\+F\+\_\+\+A\+:不完全前馈系数，范围0$\sim$1，越大延缓作用越明显，为0时，等效不使用不完全前馈} & \\
+\hline
+{\em K\+F\+F\+B\+\_\+\+B\+:不完全前馈增压系数，范围0$\sim$1，越大延缓作用越明显，为0时，等效不使用不完全前馈} & \\
+\hline
+{\em Integral\+\_\+\+Max\+:积分项上限，一般取本级\+P\+I\+D执行器正向最大输出} & \\
+\hline
+{\em Integral\+\_\+\+Min\+:积分项下限，一般取本级\+P\+I\+D执行器负向最大输出} & \\
+\hline
+{\em Output\+\_\+\+Max\+:输出上限，本级\+P\+I\+D执行器正向最大输出} & \\
+\hline
+{\em Output\+\_\+\+Min\+:输出下限，本级\+P\+I\+D执行器负向最大输出} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{注解}
+关于微分先行与前馈改进，由于传统\+P\+I\+D在输入量突变和反馈量突变时，都会引起微分项突变 但输入量突变引起的微分项变化是帮助系统执行动作（前馈效应），反馈量突变引起的微分项变化是抑制系统动作（阻尼效应） 因此将传统微分项拆开为前馈项和微分项，并分别赋予两个不同的系数，实现互相解耦的调整系数，前馈负责系统的快速跟随，微分负责系统稳定阻尼 
+
+参考资料： \href{https://blog.csdn.net/foxclever/article/details/80633275}{\texttt{ https\+://blog.\+csdn.\+net/foxclever/article/details/80633275}} \href{https://blog.csdn.net/foxclever/article/details/81048086}{\texttt{ https\+://blog.\+csdn.\+net/foxclever/article/details/81048086}} 
+
+关于不完全前馈，由于对阶跃类输入，前馈项仅在输入跳变的瞬间有输出，其他计算过程均无数输出 对于有惯性（不能突变）的系统而言，这种转瞬即逝的输出既无效果，又有害处（损伤元件） 因此在前馈项后串接一阶惯性环节（一阶滤波器）延缓前馈作用，使其产生效果，平滑前馈项输出 
+
+参考资料： \href{https://blog.csdn.net/foxclever/article/details/80551919}{\texttt{ https\+://blog.\+csdn.\+net/foxclever/article/details/80551919}} 
+
+关于前馈增压，是对于前馈项的一个补充，给控制器输出增添一个与输入的二阶导数成比例关系的项 以位置控制为例，前馈增压等效为与期望位置变化的二阶导成比例的项，即与加速度成比例的项，进一步的提高了系统的跟随快速性 
+
+参考资料：https\+://github.com/betaflight/betaflight/wiki/\+Feed-\/\+Forward-\/2.\+0 
+
+关于不完全前馈增压，与不完全前馈类似，为解决前馈增压项的瞬间输出问题所串接的一阶惯性环节 
+\end{DoxyNote}
+
+
+在文件 pid\+\_\+controller.\+cpp 第 41 行定义.
+
+\mbox{\Hypertarget{class_p_i_d___controller_acf4a8ce65999127513a75b81c803f8de}\label{class_p_i_d___controller_acf4a8ce65999127513a75b81c803f8de}} 
+\index{PID\_Controller@{PID\_Controller}!PID\_Controller@{PID\_Controller}}
+\index{PID\_Controller@{PID\_Controller}!PID\_Controller@{PID\_Controller}}
+\doxysubsubsection{\texorpdfstring{PID\_Controller()}{PID\_Controller()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily P\+I\+D\+\_\+\+Controller\+::\+P\+I\+D\+\_\+\+Controller (\begin{DoxyParamCaption}\item[{double}]{KP,  }\item[{double}]{KI,  }\item[{double}]{KD,  }\item[{double}]{Integral\+\_\+\+Max,  }\item[{double}]{Integral\+\_\+\+Min,  }\item[{double}]{Output\+\_\+\+Max,  }\item[{double}]{Output\+\_\+\+Min }\end{DoxyParamCaption})}
+
+
+
+不采用改进算法，传统\+P\+I\+D构造函数 
+
+
+
+在文件 pid\+\_\+controller.\+cpp 第 56 行定义.
+
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{class_p_i_d___controller_a2e6caccbc2e15459c6e2269c60736110}\label{class_p_i_d___controller_a2e6caccbc2e15459c6e2269c60736110}} 
+\index{PID\_Controller@{PID\_Controller}!Clear@{Clear}}
+\index{Clear@{Clear}!PID\_Controller@{PID\_Controller}}
+\doxysubsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily void P\+I\+D\+\_\+\+Controller\+::\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+在文件 pid\+\_\+controller.\+cpp 第 71 行定义.
+
+\mbox{\Hypertarget{class_p_i_d___controller_a2d3a204f4b6a3378be9a3f32073d73d3}\label{class_p_i_d___controller_a2d3a204f4b6a3378be9a3f32073d73d3}} 
+\index{PID\_Controller@{PID\_Controller}!Incremental\_PID@{Incremental\_PID}}
+\index{Incremental\_PID@{Incremental\_PID}!PID\_Controller@{PID\_Controller}}
+\doxysubsubsection{\texorpdfstring{Incremental\_PID()}{Incremental\_PID()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double P\+I\+D\+\_\+\+Controller\+::\+Incremental\+\_\+\+P\+ID (\begin{DoxyParamCaption}\item[{double}]{Input,  }\item[{double}]{Feedback }\end{DoxyParamCaption})}
+
+
+
+增量式\+P\+I\+D算法，结合梯形积分，积分抗饱和，微分先行，不完全前馈，不完全前馈增压等优化算法，当\+Kff=Kd且\+Kffb、\+Kff\+\_\+\+Alpha、\+Kffb\+\_\+\+Beta=0时，等效为传统\+P\+ID 
+
+
+
+在文件 pid\+\_\+controller.\+cpp 第 177 行定义.
+
+\mbox{\Hypertarget{class_p_i_d___controller_a8646e1ddd3322e785751a5f1933894b3}\label{class_p_i_d___controller_a8646e1ddd3322e785751a5f1933894b3}} 
+\index{PID\_Controller@{PID\_Controller}!Incremental\_PID@{Incremental\_PID}}
+\index{Incremental\_PID@{Incremental\_PID}!PID\_Controller@{PID\_Controller}}
+\doxysubsubsection{\texorpdfstring{Incremental\_PID()}{Incremental\_PID()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double P\+I\+D\+\_\+\+Controller\+::\+Incremental\+\_\+\+P\+ID (\begin{DoxyParamCaption}\item[{double}]{Input,  }\item[{double}]{Feedback,  }\item[{double}]{Differential\+\_\+\+Error }\end{DoxyParamCaption})}
+
+
+
+微分项误差(反馈量一阶导)可被传感器测量值时，微分项误差可用传感器数值代替，例如角度环的微分项误差为角速度，可用陀螺仪测得,使用时注意传感器反馈信号的极性 
+
+
+
+在文件 pid\+\_\+controller.\+cpp 第 220 行定义.
+
+\mbox{\Hypertarget{class_p_i_d___controller_ac9f423f76ec456800798271ff73912a6}\label{class_p_i_d___controller_ac9f423f76ec456800798271ff73912a6}} 
+\index{PID\_Controller@{PID\_Controller}!Position\_PID@{Position\_PID}}
+\index{Position\_PID@{Position\_PID}!PID\_Controller@{PID\_Controller}}
+\doxysubsubsection{\texorpdfstring{Position\_PID()}{Position\_PID()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double P\+I\+D\+\_\+\+Controller\+::\+Position\+\_\+\+P\+ID (\begin{DoxyParamCaption}\item[{double}]{Input,  }\item[{double}]{Feedback }\end{DoxyParamCaption})}
+
+
+
+位置式\+P\+I\+D，结合积分抗饱和，微分先行，不完全前馈，不完全前馈增压等优化算法，当\+Kff=Kd且\+Kffb、\+Kff\+\_\+\+Alpha、\+Kffb\+\_\+\+Beta=0时，等效为传统\+P\+ID 
+
+
+
+在文件 pid\+\_\+controller.\+cpp 第 91 行定义.
+
+\mbox{\Hypertarget{class_p_i_d___controller_a8c2bcc664791cbc62ded69c236ca75ed}\label{class_p_i_d___controller_a8c2bcc664791cbc62ded69c236ca75ed}} 
+\index{PID\_Controller@{PID\_Controller}!Position\_PID@{Position\_PID}}
+\index{Position\_PID@{Position\_PID}!PID\_Controller@{PID\_Controller}}
+\doxysubsubsection{\texorpdfstring{Position\_PID()}{Position\_PID()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double P\+I\+D\+\_\+\+Controller\+::\+Position\+\_\+\+P\+ID (\begin{DoxyParamCaption}\item[{double}]{Input,  }\item[{double}]{Feedback,  }\item[{double}]{Differential\+\_\+\+Error }\end{DoxyParamCaption})}
+
+
+
+与增量式注释同理 
+
+
+
+在文件 pid\+\_\+controller.\+cpp 第 134 行定义.
+
+\mbox{\Hypertarget{class_p_i_d___controller_ac6ca779a84b2eb764e08b413a3297d4c}\label{class_p_i_d___controller_ac6ca779a84b2eb764e08b413a3297d4c}} 
+\index{PID\_Controller@{PID\_Controller}!Set\_Output@{Set\_Output}}
+\index{Set\_Output@{Set\_Output}!PID\_Controller@{PID\_Controller}}
+\doxysubsubsection{\texorpdfstring{Set\_Output()}{Set\_Output()}}
+{\footnotesize\ttfamily double P\+I\+D\+\_\+\+Controller\+::\+Set\+\_\+\+Output (\begin{DoxyParamCaption}\item[{double}]{Output }\end{DoxyParamCaption})}
+
+
+
+设定输出值，一般用于手动自动平滑切换 
+
+
+
+在文件 pid\+\_\+controller.\+cpp 第 263 行定义.
+
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{class_p_i_d___controller_a3f54c77b17f8c615cc5eb950b0ac01dc}\label{class_p_i_d___controller_a3f54c77b17f8c615cc5eb950b0ac01dc}} 
+\index{PID\_Controller@{PID\_Controller}!Delta\_Out@{Delta\_Out}}
+\index{Delta\_Out@{Delta\_Out}!PID\_Controller@{PID\_Controller}}
+\doxysubsubsection{\texorpdfstring{Delta\_Out}{Delta\_Out}}
+{\footnotesize\ttfamily double P\+I\+D\+\_\+\+Controller\+::\+Delta\+\_\+\+Out = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+在文件 pid\+\_\+controller.\+h 第 46 行定义.
+
+\mbox{\Hypertarget{class_p_i_d___controller_ab0a49a7058eaffdf83091d3d2eedb62a}\label{class_p_i_d___controller_ab0a49a7058eaffdf83091d3d2eedb62a}} 
+\index{PID\_Controller@{PID\_Controller}!Diff\_Term@{Diff\_Term}}
+\index{Diff\_Term@{Diff\_Term}!PID\_Controller@{PID\_Controller}}
+\doxysubsubsection{\texorpdfstring{Diff\_Term}{Diff\_Term}}
+{\footnotesize\ttfamily double P\+I\+D\+\_\+\+Controller\+::\+Diff\+\_\+\+Term\mbox{[}3\mbox{]} = \{0\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+微分项储存器，0脚标位置储存本次微分项，1脚标位置储存上次微分项，2脚标位置储存上上次微分项 
+
+
+
+在文件 pid\+\_\+controller.\+h 第 41 行定义.
+
+\mbox{\Hypertarget{class_p_i_d___controller_ac3d9bc4c7d890931d0f5b43b1ab29ac1}\label{class_p_i_d___controller_ac3d9bc4c7d890931d0f5b43b1ab29ac1}} 
+\index{PID\_Controller@{PID\_Controller}!Err@{Err}}
+\index{Err@{Err}!PID\_Controller@{PID\_Controller}}
+\doxysubsubsection{\texorpdfstring{Err}{Err}}
+{\footnotesize\ttfamily double P\+I\+D\+\_\+\+Controller\+::\+Err\mbox{[}3\mbox{]} = \{0\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+误差存储器，0脚标位置储存本次输入减反馈，1脚标为上次误差，2脚标为上上次误差 
+
+
+
+在文件 pid\+\_\+controller.\+h 第 37 行定义.
+
+\mbox{\Hypertarget{class_p_i_d___controller_a9a60205b8b0a5e61659e87fee27faf3c}\label{class_p_i_d___controller_a9a60205b8b0a5e61659e87fee27faf3c}} 
+\index{PID\_Controller@{PID\_Controller}!Fb@{Fb}}
+\index{Fb@{Fb}!PID\_Controller@{PID\_Controller}}
+\doxysubsubsection{\texorpdfstring{Fb}{Fb}}
+{\footnotesize\ttfamily double P\+I\+D\+\_\+\+Controller\+::\+Fb\mbox{[}3\mbox{]} = \{0\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+反馈存储器，0脚标位置储存本次反馈，1脚标为上次反馈，2脚标为上上次反馈 
+
+
+
+在文件 pid\+\_\+controller.\+h 第 39 行定义.
+
+\mbox{\Hypertarget{class_p_i_d___controller_adea3e0ca4a0bf8f949f0accb3c15234a}\label{class_p_i_d___controller_adea3e0ca4a0bf8f949f0accb3c15234a}} 
+\index{PID\_Controller@{PID\_Controller}!Ff\_Term@{Ff\_Term}}
+\index{Ff\_Term@{Ff\_Term}!PID\_Controller@{PID\_Controller}}
+\doxysubsubsection{\texorpdfstring{Ff\_Term}{Ff\_Term}}
+{\footnotesize\ttfamily double P\+I\+D\+\_\+\+Controller\+::\+Ff\+\_\+\+Term\mbox{[}3\mbox{]} = \{0\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+前馈项储存器，0脚标位置储存本次前馈项，1脚标位置储存上次前馈项，2脚标位置储存上上次微前馈项 
+
+
+
+在文件 pid\+\_\+controller.\+h 第 42 行定义.
+
+\mbox{\Hypertarget{class_p_i_d___controller_a73ab9d2c698f0035bc2a5f482ae7154d}\label{class_p_i_d___controller_a73ab9d2c698f0035bc2a5f482ae7154d}} 
+\index{PID\_Controller@{PID\_Controller}!Ffb\_Term@{Ffb\_Term}}
+\index{Ffb\_Term@{Ffb\_Term}!PID\_Controller@{PID\_Controller}}
+\doxysubsubsection{\texorpdfstring{Ffb\_Term}{Ffb\_Term}}
+{\footnotesize\ttfamily double P\+I\+D\+\_\+\+Controller\+::\+Ffb\+\_\+\+Term\mbox{[}3\mbox{]} = \{0\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+前馈增压项储存器，0脚标位置储存本次前馈增压项，1脚标位置储存上次前馈增压项，2脚标位置储存上上次前馈增压项 
+
+
+
+在文件 pid\+\_\+controller.\+h 第 43 行定义.
+
+\mbox{\Hypertarget{class_p_i_d___controller_a1fe716c21ccd0440bf793ea2babf1ddb}\label{class_p_i_d___controller_a1fe716c21ccd0440bf793ea2babf1ddb}} 
+\index{PID\_Controller@{PID\_Controller}!In@{In}}
+\index{In@{In}!PID\_Controller@{PID\_Controller}}
+\doxysubsubsection{\texorpdfstring{In}{In}}
+{\footnotesize\ttfamily double P\+I\+D\+\_\+\+Controller\+::\+In\mbox{[}3\mbox{]} = \{0\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+输入存储器，0脚标位置储存本次输入，1脚标为上次输入，2脚标为上上次输入 
+
+
+
+在文件 pid\+\_\+controller.\+h 第 38 行定义.
+
+\mbox{\Hypertarget{class_p_i_d___controller_a459b6a537e6809a7e0f0f312c1f9c64c}\label{class_p_i_d___controller_a459b6a537e6809a7e0f0f312c1f9c64c}} 
+\index{PID\_Controller@{PID\_Controller}!Integ\_Max@{Integ\_Max}}
+\index{Integ\_Max@{Integ\_Max}!PID\_Controller@{PID\_Controller}}
+\doxysubsubsection{\texorpdfstring{Integ\_Max}{Integ\_Max}}
+{\footnotesize\ttfamily double P\+I\+D\+\_\+\+Controller\+::\+Integ\+\_\+\+Max = 0}
+
+
+
+积分上限，一般取本级\+P\+I\+D执行器正向最大输出 
+
+
+
+在文件 pid\+\_\+controller.\+h 第 29 行定义.
+
+\mbox{\Hypertarget{class_p_i_d___controller_ad14666a5564a4c3c99b91b5ed5c42f8c}\label{class_p_i_d___controller_ad14666a5564a4c3c99b91b5ed5c42f8c}} 
+\index{PID\_Controller@{PID\_Controller}!Integ\_Min@{Integ\_Min}}
+\index{Integ\_Min@{Integ\_Min}!PID\_Controller@{PID\_Controller}}
+\doxysubsubsection{\texorpdfstring{Integ\_Min}{Integ\_Min}}
+{\footnotesize\ttfamily double P\+I\+D\+\_\+\+Controller\+::\+Integ\+\_\+\+Min = 0}
+
+
+
+积分下限，一般取本级\+P\+I\+D执行器负向最大输出 
+
+
+
+在文件 pid\+\_\+controller.\+h 第 30 行定义.
+
+\mbox{\Hypertarget{class_p_i_d___controller_aa2032fb8ff7e041bfad4f5fd0830101e}\label{class_p_i_d___controller_aa2032fb8ff7e041bfad4f5fd0830101e}} 
+\index{PID\_Controller@{PID\_Controller}!Kd@{Kd}}
+\index{Kd@{Kd}!PID\_Controller@{PID\_Controller}}
+\doxysubsubsection{\texorpdfstring{Kd}{Kd}}
+{\footnotesize\ttfamily double P\+I\+D\+\_\+\+Controller\+::\+Kd = 0}
+
+
+
+在文件 pid\+\_\+controller.\+h 第 23 行定义.
+
+\mbox{\Hypertarget{class_p_i_d___controller_a69657b040d8ad1a3f1642ff50ef1a9fe}\label{class_p_i_d___controller_a69657b040d8ad1a3f1642ff50ef1a9fe}} 
+\index{PID\_Controller@{PID\_Controller}!Kff@{Kff}}
+\index{Kff@{Kff}!PID\_Controller@{PID\_Controller}}
+\doxysubsubsection{\texorpdfstring{Kff}{Kff}}
+{\footnotesize\ttfamily double P\+I\+D\+\_\+\+Controller\+::\+Kff = 0}
+
+
+
+前馈系数 
+
+
+
+在文件 pid\+\_\+controller.\+h 第 24 行定义.
+
+\mbox{\Hypertarget{class_p_i_d___controller_ad2dd7c8ccda2200077eebc1af96f21de}\label{class_p_i_d___controller_ad2dd7c8ccda2200077eebc1af96f21de}} 
+\index{PID\_Controller@{PID\_Controller}!Kff\_Alpha@{Kff\_Alpha}}
+\index{Kff\_Alpha@{Kff\_Alpha}!PID\_Controller@{PID\_Controller}}
+\doxysubsubsection{\texorpdfstring{Kff\_Alpha}{Kff\_Alpha}}
+{\footnotesize\ttfamily double P\+I\+D\+\_\+\+Controller\+::\+Kff\+\_\+\+Alpha = 0}
+
+
+
+不完全前馈系数，范围0$\sim$1，越大延缓作用越明显，为0时，等效不使用不完全前馈 
+
+
+
+在文件 pid\+\_\+controller.\+h 第 26 行定义.
+
+\mbox{\Hypertarget{class_p_i_d___controller_a9873dae8ffedf237a4eead227a5d62d9}\label{class_p_i_d___controller_a9873dae8ffedf237a4eead227a5d62d9}} 
+\index{PID\_Controller@{PID\_Controller}!Kffb@{Kffb}}
+\index{Kffb@{Kffb}!PID\_Controller@{PID\_Controller}}
+\doxysubsubsection{\texorpdfstring{Kffb}{Kffb}}
+{\footnotesize\ttfamily double P\+I\+D\+\_\+\+Controller\+::\+Kffb = 0}
+
+
+
+前馈增压系数 
+
+
+
+在文件 pid\+\_\+controller.\+h 第 25 行定义.
+
+\mbox{\Hypertarget{class_p_i_d___controller_a8a7dcaf582e039489fa82dd1f232f469}\label{class_p_i_d___controller_a8a7dcaf582e039489fa82dd1f232f469}} 
+\index{PID\_Controller@{PID\_Controller}!Kffb\_Beta@{Kffb\_Beta}}
+\index{Kffb\_Beta@{Kffb\_Beta}!PID\_Controller@{PID\_Controller}}
+\doxysubsubsection{\texorpdfstring{Kffb\_Beta}{Kffb\_Beta}}
+{\footnotesize\ttfamily double P\+I\+D\+\_\+\+Controller\+::\+Kffb\+\_\+\+Beta = 0}
+
+
+
+不完全前馈增压系数，范围0$\sim$1，越大延缓作用越明显，为0时，等效不使用不完全前馈 
+
+
+
+在文件 pid\+\_\+controller.\+h 第 27 行定义.
+
+\mbox{\Hypertarget{class_p_i_d___controller_afb06b9ff3e4ee73f7cefd51d715e1ac2}\label{class_p_i_d___controller_afb06b9ff3e4ee73f7cefd51d715e1ac2}} 
+\index{PID\_Controller@{PID\_Controller}!Ki@{Ki}}
+\index{Ki@{Ki}!PID\_Controller@{PID\_Controller}}
+\doxysubsubsection{\texorpdfstring{Ki}{Ki}}
+{\footnotesize\ttfamily double P\+I\+D\+\_\+\+Controller\+::\+Ki = 0}
+
+
+
+在文件 pid\+\_\+controller.\+h 第 22 行定义.
+
+\mbox{\Hypertarget{class_p_i_d___controller_a0707633a63d01277e5198c017f4a2e04}\label{class_p_i_d___controller_a0707633a63d01277e5198c017f4a2e04}} 
+\index{PID\_Controller@{PID\_Controller}!Kp@{Kp}}
+\index{Kp@{Kp}!PID\_Controller@{PID\_Controller}}
+\doxysubsubsection{\texorpdfstring{Kp}{Kp}}
+{\footnotesize\ttfamily double P\+I\+D\+\_\+\+Controller\+::\+Kp = 0}
+
+
+
+在文件 pid\+\_\+controller.\+h 第 21 行定义.
+
+\mbox{\Hypertarget{class_p_i_d___controller_a991d202e3546ce2633292b70d06e2f7c}\label{class_p_i_d___controller_a991d202e3546ce2633292b70d06e2f7c}} 
+\index{PID\_Controller@{PID\_Controller}!Out@{Out}}
+\index{Out@{Out}!PID\_Controller@{PID\_Controller}}
+\doxysubsubsection{\texorpdfstring{Out}{Out}}
+{\footnotesize\ttfamily double P\+I\+D\+\_\+\+Controller\+::\+Out = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+在文件 pid\+\_\+controller.\+h 第 45 行定义.
+
+\mbox{\Hypertarget{class_p_i_d___controller_a80ea87861bccb7b64d78de53dfd693db}\label{class_p_i_d___controller_a80ea87861bccb7b64d78de53dfd693db}} 
+\index{PID\_Controller@{PID\_Controller}!Out\_Max@{Out\_Max}}
+\index{Out\_Max@{Out\_Max}!PID\_Controller@{PID\_Controller}}
+\doxysubsubsection{\texorpdfstring{Out\_Max}{Out\_Max}}
+{\footnotesize\ttfamily double P\+I\+D\+\_\+\+Controller\+::\+Out\+\_\+\+Max = 0}
+
+
+
+输出限幅，一般取本级\+P\+I\+D执行器正向最大输出 
+
+
+
+在文件 pid\+\_\+controller.\+h 第 32 行定义.
+
+\mbox{\Hypertarget{class_p_i_d___controller_a58942ac25a3280f4f4a3a98e9b1573d1}\label{class_p_i_d___controller_a58942ac25a3280f4f4a3a98e9b1573d1}} 
+\index{PID\_Controller@{PID\_Controller}!Out\_Min@{Out\_Min}}
+\index{Out\_Min@{Out\_Min}!PID\_Controller@{PID\_Controller}}
+\doxysubsubsection{\texorpdfstring{Out\_Min}{Out\_Min}}
+{\footnotesize\ttfamily double P\+I\+D\+\_\+\+Controller\+::\+Out\+\_\+\+Min = 0}
+
+
+
+输出限幅，一般取本级\+P\+I\+D执行器负向最大输出 
+
+
+
+在文件 pid\+\_\+controller.\+h 第 33 行定义.
+
+\mbox{\Hypertarget{class_p_i_d___controller_adf3f3379511e27219bb9b085f21c10c2}\label{class_p_i_d___controller_adf3f3379511e27219bb9b085f21c10c2}} 
+\index{PID\_Controller@{PID\_Controller}!Position\_Integ\_Term@{Position\_Integ\_Term}}
+\index{Position\_Integ\_Term@{Position\_Integ\_Term}!PID\_Controller@{PID\_Controller}}
+\doxysubsubsection{\texorpdfstring{Position\_Integ\_Term}{Position\_Integ\_Term}}
+{\footnotesize\ttfamily double P\+I\+D\+\_\+\+Controller\+::\+Position\+\_\+\+Integ\+\_\+\+Term\mbox{[}3\mbox{]} = \{0\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+位置式\+P\+I\+D积分项储存器，0脚标位置储存输入项累加值，1脚标为本次积分项，2脚标为上次积分项 
+
+
+
+在文件 pid\+\_\+controller.\+h 第 40 行定义.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Test/\+P\+I\+D\+\_\+\+Controller/\mbox{\hyperlink{pid__controller_8h}{pid\+\_\+controller.\+h}}\item 
+D\+:/\+Test/\+P\+I\+D\+\_\+\+Controller/\mbox{\hyperlink{pid__controller_8cpp}{pid\+\_\+controller.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,946 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PID_Controller: PID_Controller类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PID_Controller
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">PID_controller_lib</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.20 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="class_p_i_d___controller-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">PID_Controller类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="pid__controller_8h_source.html">pid_controller.h</a>&gt;</code></p>
+<div class="dynheader">
+PID_Controller 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_p_i_d___controller__coll__graph.gif" border="0" usemap="#a_p_i_d___controller_coll__map" alt="Collaboration graph"/></div>
+<map name="_p_i_d___controller_coll__map" id="_p_i_d___controller_coll__map">
+<area shape="rect" title=" " alt="" coords="5,5,153,464"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ae586b8be3e47514e131f0fd06ca99b7e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d___controller.html#ae586b8be3e47514e131f0fd06ca99b7e">PID_Controller</a> (double KP, double KI, double KD, double KFF, double KFFB, double KFF_A, double KFFB_B, double Integral_Max, double Integral_Min, double Output_Max, double Output_Min)</td></tr>
+<tr class="memdesc:ae586b8be3e47514e131f0fd06ca99b7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">PID控制器构造函数  <a href="class_p_i_d___controller.html#ae586b8be3e47514e131f0fd06ca99b7e">更多...</a><br /></td></tr>
+<tr class="separator:ae586b8be3e47514e131f0fd06ca99b7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf4a8ce65999127513a75b81c803f8de"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d___controller.html#acf4a8ce65999127513a75b81c803f8de">PID_Controller</a> (double KP, double KI, double KD, double Integral_Max, double Integral_Min, double Output_Max, double Output_Min)</td></tr>
+<tr class="memdesc:acf4a8ce65999127513a75b81c803f8de"><td class="mdescLeft">&#160;</td><td class="mdescRight">不采用改进算法，传统PID构造函数  <a href="class_p_i_d___controller.html#acf4a8ce65999127513a75b81c803f8de">更多...</a><br /></td></tr>
+<tr class="separator:acf4a8ce65999127513a75b81c803f8de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e6caccbc2e15459c6e2269c60736110"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d___controller.html#a2e6caccbc2e15459c6e2269c60736110">Clear</a> ()</td></tr>
+<tr class="separator:a2e6caccbc2e15459c6e2269c60736110"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d3a204f4b6a3378be9a3f32073d73d3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d___controller.html#a2d3a204f4b6a3378be9a3f32073d73d3">Incremental_PID</a> (double Input, double Feedback)</td></tr>
+<tr class="memdesc:a2d3a204f4b6a3378be9a3f32073d73d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">增量式PID算法，结合梯形积分，积分抗饱和，微分先行，不完全前馈，不完全前馈增压等优化算法，当Kff=Kd且Kffb、Kff_Alpha、Kffb_Beta=0时，等效为传统PID  <a href="class_p_i_d___controller.html#a2d3a204f4b6a3378be9a3f32073d73d3">更多...</a><br /></td></tr>
+<tr class="separator:a2d3a204f4b6a3378be9a3f32073d73d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8646e1ddd3322e785751a5f1933894b3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d___controller.html#a8646e1ddd3322e785751a5f1933894b3">Incremental_PID</a> (double Input, double Feedback, double Differential_Error)</td></tr>
+<tr class="memdesc:a8646e1ddd3322e785751a5f1933894b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">微分项误差(反馈量一阶导)可被传感器测量值时，微分项误差可用传感器数值代替，例如角度环的微分项误差为角速度，可用陀螺仪测得,使用时注意传感器反馈信号的极性  <a href="class_p_i_d___controller.html#a8646e1ddd3322e785751a5f1933894b3">更多...</a><br /></td></tr>
+<tr class="separator:a8646e1ddd3322e785751a5f1933894b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9f423f76ec456800798271ff73912a6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d___controller.html#ac9f423f76ec456800798271ff73912a6">Position_PID</a> (double Input, double Feedback)</td></tr>
+<tr class="memdesc:ac9f423f76ec456800798271ff73912a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">位置式PID，结合积分抗饱和，微分先行，不完全前馈，不完全前馈增压等优化算法，当Kff=Kd且Kffb、Kff_Alpha、Kffb_Beta=0时，等效为传统PID  <a href="class_p_i_d___controller.html#ac9f423f76ec456800798271ff73912a6">更多...</a><br /></td></tr>
+<tr class="separator:ac9f423f76ec456800798271ff73912a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c2bcc664791cbc62ded69c236ca75ed"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d___controller.html#a8c2bcc664791cbc62ded69c236ca75ed">Position_PID</a> (double Input, double Feedback, double Differential_Error)</td></tr>
+<tr class="memdesc:a8c2bcc664791cbc62ded69c236ca75ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">与增量式注释同理  <a href="class_p_i_d___controller.html#a8c2bcc664791cbc62ded69c236ca75ed">更多...</a><br /></td></tr>
+<tr class="separator:a8c2bcc664791cbc62ded69c236ca75ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6ca779a84b2eb764e08b413a3297d4c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d___controller.html#ac6ca779a84b2eb764e08b413a3297d4c">Set_Output</a> (double Output)</td></tr>
+<tr class="memdesc:ac6ca779a84b2eb764e08b413a3297d4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">设定输出值，一般用于手动自动平滑切换  <a href="class_p_i_d___controller.html#ac6ca779a84b2eb764e08b413a3297d4c">更多...</a><br /></td></tr>
+<tr class="separator:ac6ca779a84b2eb764e08b413a3297d4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a0707633a63d01277e5198c017f4a2e04"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d___controller.html#a0707633a63d01277e5198c017f4a2e04">Kp</a> = 0</td></tr>
+<tr class="separator:a0707633a63d01277e5198c017f4a2e04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb06b9ff3e4ee73f7cefd51d715e1ac2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d___controller.html#afb06b9ff3e4ee73f7cefd51d715e1ac2">Ki</a> = 0</td></tr>
+<tr class="separator:afb06b9ff3e4ee73f7cefd51d715e1ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2032fb8ff7e041bfad4f5fd0830101e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d___controller.html#aa2032fb8ff7e041bfad4f5fd0830101e">Kd</a> = 0</td></tr>
+<tr class="separator:aa2032fb8ff7e041bfad4f5fd0830101e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69657b040d8ad1a3f1642ff50ef1a9fe"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d___controller.html#a69657b040d8ad1a3f1642ff50ef1a9fe">Kff</a> = 0</td></tr>
+<tr class="memdesc:a69657b040d8ad1a3f1642ff50ef1a9fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">前馈系数  <a href="class_p_i_d___controller.html#a69657b040d8ad1a3f1642ff50ef1a9fe">更多...</a><br /></td></tr>
+<tr class="separator:a69657b040d8ad1a3f1642ff50ef1a9fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9873dae8ffedf237a4eead227a5d62d9"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d___controller.html#a9873dae8ffedf237a4eead227a5d62d9">Kffb</a> = 0</td></tr>
+<tr class="memdesc:a9873dae8ffedf237a4eead227a5d62d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">前馈增压系数  <a href="class_p_i_d___controller.html#a9873dae8ffedf237a4eead227a5d62d9">更多...</a><br /></td></tr>
+<tr class="separator:a9873dae8ffedf237a4eead227a5d62d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2dd7c8ccda2200077eebc1af96f21de"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d___controller.html#ad2dd7c8ccda2200077eebc1af96f21de">Kff_Alpha</a> = 0</td></tr>
+<tr class="memdesc:ad2dd7c8ccda2200077eebc1af96f21de"><td class="mdescLeft">&#160;</td><td class="mdescRight">不完全前馈系数，范围0~1，越大延缓作用越明显，为0时，等效不使用不完全前馈  <a href="class_p_i_d___controller.html#ad2dd7c8ccda2200077eebc1af96f21de">更多...</a><br /></td></tr>
+<tr class="separator:ad2dd7c8ccda2200077eebc1af96f21de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a7dcaf582e039489fa82dd1f232f469"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d___controller.html#a8a7dcaf582e039489fa82dd1f232f469">Kffb_Beta</a> = 0</td></tr>
+<tr class="memdesc:a8a7dcaf582e039489fa82dd1f232f469"><td class="mdescLeft">&#160;</td><td class="mdescRight">不完全前馈增压系数，范围0~1，越大延缓作用越明显，为0时，等效不使用不完全前馈  <a href="class_p_i_d___controller.html#a8a7dcaf582e039489fa82dd1f232f469">更多...</a><br /></td></tr>
+<tr class="separator:a8a7dcaf582e039489fa82dd1f232f469"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a459b6a537e6809a7e0f0f312c1f9c64c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d___controller.html#a459b6a537e6809a7e0f0f312c1f9c64c">Integ_Max</a> = 0</td></tr>
+<tr class="memdesc:a459b6a537e6809a7e0f0f312c1f9c64c"><td class="mdescLeft">&#160;</td><td class="mdescRight">积分上限，一般取本级PID执行器正向最大输出  <a href="class_p_i_d___controller.html#a459b6a537e6809a7e0f0f312c1f9c64c">更多...</a><br /></td></tr>
+<tr class="separator:a459b6a537e6809a7e0f0f312c1f9c64c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad14666a5564a4c3c99b91b5ed5c42f8c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d___controller.html#ad14666a5564a4c3c99b91b5ed5c42f8c">Integ_Min</a> = 0</td></tr>
+<tr class="memdesc:ad14666a5564a4c3c99b91b5ed5c42f8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">积分下限，一般取本级PID执行器负向最大输出  <a href="class_p_i_d___controller.html#ad14666a5564a4c3c99b91b5ed5c42f8c">更多...</a><br /></td></tr>
+<tr class="separator:ad14666a5564a4c3c99b91b5ed5c42f8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80ea87861bccb7b64d78de53dfd693db"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d___controller.html#a80ea87861bccb7b64d78de53dfd693db">Out_Max</a> = 0</td></tr>
+<tr class="memdesc:a80ea87861bccb7b64d78de53dfd693db"><td class="mdescLeft">&#160;</td><td class="mdescRight">输出限幅，一般取本级PID执行器正向最大输出  <a href="class_p_i_d___controller.html#a80ea87861bccb7b64d78de53dfd693db">更多...</a><br /></td></tr>
+<tr class="separator:a80ea87861bccb7b64d78de53dfd693db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58942ac25a3280f4f4a3a98e9b1573d1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d___controller.html#a58942ac25a3280f4f4a3a98e9b1573d1">Out_Min</a> = 0</td></tr>
+<tr class="memdesc:a58942ac25a3280f4f4a3a98e9b1573d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">输出限幅，一般取本级PID执行器负向最大输出  <a href="class_p_i_d___controller.html#a58942ac25a3280f4f4a3a98e9b1573d1">更多...</a><br /></td></tr>
+<tr class="separator:a58942ac25a3280f4f4a3a98e9b1573d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:ac3d9bc4c7d890931d0f5b43b1ab29ac1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d___controller.html#ac3d9bc4c7d890931d0f5b43b1ab29ac1">Err</a> [3] = {0}</td></tr>
+<tr class="memdesc:ac3d9bc4c7d890931d0f5b43b1ab29ac1"><td class="mdescLeft">&#160;</td><td class="mdescRight">误差存储器，0脚标位置储存本次输入减反馈，1脚标为上次误差，2脚标为上上次误差  <a href="class_p_i_d___controller.html#ac3d9bc4c7d890931d0f5b43b1ab29ac1">更多...</a><br /></td></tr>
+<tr class="separator:ac3d9bc4c7d890931d0f5b43b1ab29ac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fe716c21ccd0440bf793ea2babf1ddb"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d___controller.html#a1fe716c21ccd0440bf793ea2babf1ddb">In</a> [3] = {0}</td></tr>
+<tr class="memdesc:a1fe716c21ccd0440bf793ea2babf1ddb"><td class="mdescLeft">&#160;</td><td class="mdescRight">输入存储器，0脚标位置储存本次输入，1脚标为上次输入，2脚标为上上次输入  <a href="class_p_i_d___controller.html#a1fe716c21ccd0440bf793ea2babf1ddb">更多...</a><br /></td></tr>
+<tr class="separator:a1fe716c21ccd0440bf793ea2babf1ddb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a60205b8b0a5e61659e87fee27faf3c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d___controller.html#a9a60205b8b0a5e61659e87fee27faf3c">Fb</a> [3] = {0}</td></tr>
+<tr class="memdesc:a9a60205b8b0a5e61659e87fee27faf3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">反馈存储器，0脚标位置储存本次反馈，1脚标为上次反馈，2脚标为上上次反馈  <a href="class_p_i_d___controller.html#a9a60205b8b0a5e61659e87fee27faf3c">更多...</a><br /></td></tr>
+<tr class="separator:a9a60205b8b0a5e61659e87fee27faf3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf3f3379511e27219bb9b085f21c10c2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d___controller.html#adf3f3379511e27219bb9b085f21c10c2">Position_Integ_Term</a> [3] = {0}</td></tr>
+<tr class="memdesc:adf3f3379511e27219bb9b085f21c10c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">位置式PID积分项储存器，0脚标位置储存输入项累加值，1脚标为本次积分项，2脚标为上次积分项  <a href="class_p_i_d___controller.html#adf3f3379511e27219bb9b085f21c10c2">更多...</a><br /></td></tr>
+<tr class="separator:adf3f3379511e27219bb9b085f21c10c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0a49a7058eaffdf83091d3d2eedb62a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d___controller.html#ab0a49a7058eaffdf83091d3d2eedb62a">Diff_Term</a> [3] = {0}</td></tr>
+<tr class="memdesc:ab0a49a7058eaffdf83091d3d2eedb62a"><td class="mdescLeft">&#160;</td><td class="mdescRight">微分项储存器，0脚标位置储存本次微分项，1脚标位置储存上次微分项，2脚标位置储存上上次微分项  <a href="class_p_i_d___controller.html#ab0a49a7058eaffdf83091d3d2eedb62a">更多...</a><br /></td></tr>
+<tr class="separator:ab0a49a7058eaffdf83091d3d2eedb62a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adea3e0ca4a0bf8f949f0accb3c15234a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d___controller.html#adea3e0ca4a0bf8f949f0accb3c15234a">Ff_Term</a> [3] = {0}</td></tr>
+<tr class="memdesc:adea3e0ca4a0bf8f949f0accb3c15234a"><td class="mdescLeft">&#160;</td><td class="mdescRight">前馈项储存器，0脚标位置储存本次前馈项，1脚标位置储存上次前馈项，2脚标位置储存上上次微前馈项  <a href="class_p_i_d___controller.html#adea3e0ca4a0bf8f949f0accb3c15234a">更多...</a><br /></td></tr>
+<tr class="separator:adea3e0ca4a0bf8f949f0accb3c15234a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73ab9d2c698f0035bc2a5f482ae7154d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d___controller.html#a73ab9d2c698f0035bc2a5f482ae7154d">Ffb_Term</a> [3] = {0}</td></tr>
+<tr class="memdesc:a73ab9d2c698f0035bc2a5f482ae7154d"><td class="mdescLeft">&#160;</td><td class="mdescRight">前馈增压项储存器，0脚标位置储存本次前馈增压项，1脚标位置储存上次前馈增压项，2脚标位置储存上上次前馈增压项  <a href="class_p_i_d___controller.html#a73ab9d2c698f0035bc2a5f482ae7154d">更多...</a><br /></td></tr>
+<tr class="separator:a73ab9d2c698f0035bc2a5f482ae7154d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a991d202e3546ce2633292b70d06e2f7c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d___controller.html#a991d202e3546ce2633292b70d06e2f7c">Out</a> = 0</td></tr>
+<tr class="separator:a991d202e3546ce2633292b70d06e2f7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f54c77b17f8c615cc5eb950b0ac01dc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d___controller.html#a3f54c77b17f8c615cc5eb950b0ac01dc">Delta_Out</a> = 0</td></tr>
+<tr class="separator:a3f54c77b17f8c615cc5eb950b0ac01dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="pid__controller_8h_source.html">pid_controller.h</a> 第 <a class="el" href="pid__controller_8h_source.html#l00006">6</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="ae586b8be3e47514e131f0fd06ca99b7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae586b8be3e47514e131f0fd06ca99b7e">&#9670;&nbsp;</a></span>PID_Controller() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PID_Controller::PID_Controller </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>KP</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>KI</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>KD</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>KFF</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>KFFB</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>KFF_A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>KFFB_B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>Integral_Max</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>Integral_Min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>Output_Max</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>Output_Min</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>PID控制器构造函数 </p>
+<p>改进型PID控制器构造函数 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">KP:比例系数</td><td></td></tr>
+    <tr><td class="paramname">KI:积分系数</td><td></td></tr>
+    <tr><td class="paramname">KD:微分系数</td><td></td></tr>
+    <tr><td class="paramname">KFF:前馈系数，与微分系数相等时，等效为传统的无微分先行和前馈PID</td><td></td></tr>
+    <tr><td class="paramname">KFFB:前馈增压系数，为0时，等效不使用前馈增压</td><td></td></tr>
+    <tr><td class="paramname">KFF_A:不完全前馈系数，范围0~1，越大延缓作用越明显，为0时，等效不使用不完全前馈</td><td></td></tr>
+    <tr><td class="paramname">KFFB_B:不完全前馈增压系数，范围0~1，越大延缓作用越明显，为0时，等效不使用不完全前馈</td><td></td></tr>
+    <tr><td class="paramname">Integral_Max:积分项上限，一般取本级PID执行器正向最大输出</td><td></td></tr>
+    <tr><td class="paramname">Integral_Min:积分项下限，一般取本级PID执行器负向最大输出</td><td></td></tr>
+    <tr><td class="paramname">Output_Max:输出上限，本级PID执行器正向最大输出</td><td></td></tr>
+    <tr><td class="paramname">Output_Min:输出下限，本级PID执行器负向最大输出</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>注解</dt><dd>关于微分先行与前馈改进，由于传统PID在输入量突变和反馈量突变时，都会引起微分项突变 但输入量突变引起的微分项变化是帮助系统执行动作（前馈效应），反馈量突变引起的微分项变化是抑制系统动作（阻尼效应） 因此将传统微分项拆开为前馈项和微分项，并分别赋予两个不同的系数，实现互相解耦的调整系数，前馈负责系统的快速跟随，微分负责系统稳定阻尼 </dd>
+<dd>
+参考资料： <a href="https://blog.csdn.net/foxclever/article/details/80633275">https://blog.csdn.net/foxclever/article/details/80633275</a> <a href="https://blog.csdn.net/foxclever/article/details/81048086">https://blog.csdn.net/foxclever/article/details/81048086</a> </dd>
+<dd>
+关于不完全前馈，由于对阶跃类输入，前馈项仅在输入跳变的瞬间有输出，其他计算过程均无数输出 对于有惯性（不能突变）的系统而言，这种转瞬即逝的输出既无效果，又有害处（损伤元件） 因此在前馈项后串接一阶惯性环节（一阶滤波器）延缓前馈作用，使其产生效果，平滑前馈项输出 </dd>
+<dd>
+参考资料： <a href="https://blog.csdn.net/foxclever/article/details/80551919">https://blog.csdn.net/foxclever/article/details/80551919</a> </dd>
+<dd>
+关于前馈增压，是对于前馈项的一个补充，给控制器输出增添一个与输入的二阶导数成比例关系的项 以位置控制为例，前馈增压等效为与期望位置变化的二阶导成比例的项，即与加速度成比例的项，进一步的提高了系统的跟随快速性 </dd>
+<dd>
+参考资料：https://github.com/betaflight/betaflight/wiki/Feed-Forward-2.0 </dd>
+<dd>
+关于不完全前馈增压，与不完全前馈类似，为解决前馈增压项的瞬间输出问题所串接的一阶惯性环节 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="pid__controller_8cpp_source.html">pid_controller.cpp</a> 第 <a class="el" href="pid__controller_8cpp_source.html#l00041">41</a> 行定义.</p>
+
+</div>
+</div>
+<a id="acf4a8ce65999127513a75b81c803f8de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf4a8ce65999127513a75b81c803f8de">&#9670;&nbsp;</a></span>PID_Controller() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PID_Controller::PID_Controller </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>KP</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>KI</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>KD</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>Integral_Max</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>Integral_Min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>Output_Max</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>Output_Min</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>不采用改进算法，传统PID构造函数 </p>
+
+<p class="definition">在文件 <a class="el" href="pid__controller_8cpp_source.html">pid_controller.cpp</a> 第 <a class="el" href="pid__controller_8cpp_source.html#l00056">56</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a2e6caccbc2e15459c6e2269c60736110"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e6caccbc2e15459c6e2269c60736110">&#9670;&nbsp;</a></span>Clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PID_Controller::Clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="pid__controller_8cpp_source.html">pid_controller.cpp</a> 第 <a class="el" href="pid__controller_8cpp_source.html#l00071">71</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a2d3a204f4b6a3378be9a3f32073d73d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d3a204f4b6a3378be9a3f32073d73d3">&#9670;&nbsp;</a></span>Incremental_PID() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PID_Controller::Incremental_PID </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>Input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>Feedback</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>增量式PID算法，结合梯形积分，积分抗饱和，微分先行，不完全前馈，不完全前馈增压等优化算法，当Kff=Kd且Kffb、Kff_Alpha、Kffb_Beta=0时，等效为传统PID </p>
+
+<p class="definition">在文件 <a class="el" href="pid__controller_8cpp_source.html">pid_controller.cpp</a> 第 <a class="el" href="pid__controller_8cpp_source.html#l00177">177</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a8646e1ddd3322e785751a5f1933894b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8646e1ddd3322e785751a5f1933894b3">&#9670;&nbsp;</a></span>Incremental_PID() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PID_Controller::Incremental_PID </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>Input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>Feedback</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>Differential_Error</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>微分项误差(反馈量一阶导)可被传感器测量值时，微分项误差可用传感器数值代替，例如角度环的微分项误差为角速度，可用陀螺仪测得,使用时注意传感器反馈信号的极性 </p>
+
+<p class="definition">在文件 <a class="el" href="pid__controller_8cpp_source.html">pid_controller.cpp</a> 第 <a class="el" href="pid__controller_8cpp_source.html#l00220">220</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ac9f423f76ec456800798271ff73912a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9f423f76ec456800798271ff73912a6">&#9670;&nbsp;</a></span>Position_PID() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PID_Controller::Position_PID </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>Input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>Feedback</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>位置式PID，结合积分抗饱和，微分先行，不完全前馈，不完全前馈增压等优化算法，当Kff=Kd且Kffb、Kff_Alpha、Kffb_Beta=0时，等效为传统PID </p>
+
+<p class="definition">在文件 <a class="el" href="pid__controller_8cpp_source.html">pid_controller.cpp</a> 第 <a class="el" href="pid__controller_8cpp_source.html#l00091">91</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a8c2bcc664791cbc62ded69c236ca75ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c2bcc664791cbc62ded69c236ca75ed">&#9670;&nbsp;</a></span>Position_PID() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PID_Controller::Position_PID </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>Input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>Feedback</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>Differential_Error</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>与增量式注释同理 </p>
+
+<p class="definition">在文件 <a class="el" href="pid__controller_8cpp_source.html">pid_controller.cpp</a> 第 <a class="el" href="pid__controller_8cpp_source.html#l00134">134</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ac6ca779a84b2eb764e08b413a3297d4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6ca779a84b2eb764e08b413a3297d4c">&#9670;&nbsp;</a></span>Set_Output()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PID_Controller::Set_Output </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>Output</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设定输出值，一般用于手动自动平滑切换 </p>
+
+<p class="definition">在文件 <a class="el" href="pid__controller_8cpp_source.html">pid_controller.cpp</a> 第 <a class="el" href="pid__controller_8cpp_source.html#l00263">263</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a3f54c77b17f8c615cc5eb950b0ac01dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f54c77b17f8c615cc5eb950b0ac01dc">&#9670;&nbsp;</a></span>Delta_Out</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PID_Controller::Delta_Out = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="pid__controller_8h_source.html">pid_controller.h</a> 第 <a class="el" href="pid__controller_8h_source.html#l00046">46</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ab0a49a7058eaffdf83091d3d2eedb62a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0a49a7058eaffdf83091d3d2eedb62a">&#9670;&nbsp;</a></span>Diff_Term</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PID_Controller::Diff_Term[3] = {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>微分项储存器，0脚标位置储存本次微分项，1脚标位置储存上次微分项，2脚标位置储存上上次微分项 </p>
+
+<p class="definition">在文件 <a class="el" href="pid__controller_8h_source.html">pid_controller.h</a> 第 <a class="el" href="pid__controller_8h_source.html#l00041">41</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ac3d9bc4c7d890931d0f5b43b1ab29ac1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3d9bc4c7d890931d0f5b43b1ab29ac1">&#9670;&nbsp;</a></span>Err</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PID_Controller::Err[3] = {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>误差存储器，0脚标位置储存本次输入减反馈，1脚标为上次误差，2脚标为上上次误差 </p>
+
+<p class="definition">在文件 <a class="el" href="pid__controller_8h_source.html">pid_controller.h</a> 第 <a class="el" href="pid__controller_8h_source.html#l00037">37</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a9a60205b8b0a5e61659e87fee27faf3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a60205b8b0a5e61659e87fee27faf3c">&#9670;&nbsp;</a></span>Fb</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PID_Controller::Fb[3] = {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>反馈存储器，0脚标位置储存本次反馈，1脚标为上次反馈，2脚标为上上次反馈 </p>
+
+<p class="definition">在文件 <a class="el" href="pid__controller_8h_source.html">pid_controller.h</a> 第 <a class="el" href="pid__controller_8h_source.html#l00039">39</a> 行定义.</p>
+
+</div>
+</div>
+<a id="adea3e0ca4a0bf8f949f0accb3c15234a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adea3e0ca4a0bf8f949f0accb3c15234a">&#9670;&nbsp;</a></span>Ff_Term</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PID_Controller::Ff_Term[3] = {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>前馈项储存器，0脚标位置储存本次前馈项，1脚标位置储存上次前馈项，2脚标位置储存上上次微前馈项 </p>
+
+<p class="definition">在文件 <a class="el" href="pid__controller_8h_source.html">pid_controller.h</a> 第 <a class="el" href="pid__controller_8h_source.html#l00042">42</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a73ab9d2c698f0035bc2a5f482ae7154d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73ab9d2c698f0035bc2a5f482ae7154d">&#9670;&nbsp;</a></span>Ffb_Term</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PID_Controller::Ffb_Term[3] = {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>前馈增压项储存器，0脚标位置储存本次前馈增压项，1脚标位置储存上次前馈增压项，2脚标位置储存上上次前馈增压项 </p>
+
+<p class="definition">在文件 <a class="el" href="pid__controller_8h_source.html">pid_controller.h</a> 第 <a class="el" href="pid__controller_8h_source.html#l00043">43</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a1fe716c21ccd0440bf793ea2babf1ddb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fe716c21ccd0440bf793ea2babf1ddb">&#9670;&nbsp;</a></span>In</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PID_Controller::In[3] = {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>输入存储器，0脚标位置储存本次输入，1脚标为上次输入，2脚标为上上次输入 </p>
+
+<p class="definition">在文件 <a class="el" href="pid__controller_8h_source.html">pid_controller.h</a> 第 <a class="el" href="pid__controller_8h_source.html#l00038">38</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a459b6a537e6809a7e0f0f312c1f9c64c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a459b6a537e6809a7e0f0f312c1f9c64c">&#9670;&nbsp;</a></span>Integ_Max</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PID_Controller::Integ_Max = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>积分上限，一般取本级PID执行器正向最大输出 </p>
+
+<p class="definition">在文件 <a class="el" href="pid__controller_8h_source.html">pid_controller.h</a> 第 <a class="el" href="pid__controller_8h_source.html#l00029">29</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ad14666a5564a4c3c99b91b5ed5c42f8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad14666a5564a4c3c99b91b5ed5c42f8c">&#9670;&nbsp;</a></span>Integ_Min</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PID_Controller::Integ_Min = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>积分下限，一般取本级PID执行器负向最大输出 </p>
+
+<p class="definition">在文件 <a class="el" href="pid__controller_8h_source.html">pid_controller.h</a> 第 <a class="el" href="pid__controller_8h_source.html#l00030">30</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aa2032fb8ff7e041bfad4f5fd0830101e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2032fb8ff7e041bfad4f5fd0830101e">&#9670;&nbsp;</a></span>Kd</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PID_Controller::Kd = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="pid__controller_8h_source.html">pid_controller.h</a> 第 <a class="el" href="pid__controller_8h_source.html#l00023">23</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a69657b040d8ad1a3f1642ff50ef1a9fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69657b040d8ad1a3f1642ff50ef1a9fe">&#9670;&nbsp;</a></span>Kff</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PID_Controller::Kff = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>前馈系数 </p>
+
+<p class="definition">在文件 <a class="el" href="pid__controller_8h_source.html">pid_controller.h</a> 第 <a class="el" href="pid__controller_8h_source.html#l00024">24</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ad2dd7c8ccda2200077eebc1af96f21de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2dd7c8ccda2200077eebc1af96f21de">&#9670;&nbsp;</a></span>Kff_Alpha</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PID_Controller::Kff_Alpha = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>不完全前馈系数，范围0~1，越大延缓作用越明显，为0时，等效不使用不完全前馈 </p>
+
+<p class="definition">在文件 <a class="el" href="pid__controller_8h_source.html">pid_controller.h</a> 第 <a class="el" href="pid__controller_8h_source.html#l00026">26</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a9873dae8ffedf237a4eead227a5d62d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9873dae8ffedf237a4eead227a5d62d9">&#9670;&nbsp;</a></span>Kffb</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PID_Controller::Kffb = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>前馈增压系数 </p>
+
+<p class="definition">在文件 <a class="el" href="pid__controller_8h_source.html">pid_controller.h</a> 第 <a class="el" href="pid__controller_8h_source.html#l00025">25</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a8a7dcaf582e039489fa82dd1f232f469"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a7dcaf582e039489fa82dd1f232f469">&#9670;&nbsp;</a></span>Kffb_Beta</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PID_Controller::Kffb_Beta = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>不完全前馈增压系数，范围0~1，越大延缓作用越明显，为0时，等效不使用不完全前馈 </p>
+
+<p class="definition">在文件 <a class="el" href="pid__controller_8h_source.html">pid_controller.h</a> 第 <a class="el" href="pid__controller_8h_source.html#l00027">27</a> 行定义.</p>
+
+</div>
+</div>
+<a id="afb06b9ff3e4ee73f7cefd51d715e1ac2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb06b9ff3e4ee73f7cefd51d715e1ac2">&#9670;&nbsp;</a></span>Ki</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PID_Controller::Ki = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="pid__controller_8h_source.html">pid_controller.h</a> 第 <a class="el" href="pid__controller_8h_source.html#l00022">22</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a0707633a63d01277e5198c017f4a2e04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0707633a63d01277e5198c017f4a2e04">&#9670;&nbsp;</a></span>Kp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PID_Controller::Kp = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="pid__controller_8h_source.html">pid_controller.h</a> 第 <a class="el" href="pid__controller_8h_source.html#l00021">21</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a991d202e3546ce2633292b70d06e2f7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a991d202e3546ce2633292b70d06e2f7c">&#9670;&nbsp;</a></span>Out</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PID_Controller::Out = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="pid__controller_8h_source.html">pid_controller.h</a> 第 <a class="el" href="pid__controller_8h_source.html#l00045">45</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a80ea87861bccb7b64d78de53dfd693db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80ea87861bccb7b64d78de53dfd693db">&#9670;&nbsp;</a></span>Out_Max</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PID_Controller::Out_Max = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>输出限幅，一般取本级PID执行器正向最大输出 </p>
+
+<p class="definition">在文件 <a class="el" href="pid__controller_8h_source.html">pid_controller.h</a> 第 <a class="el" href="pid__controller_8h_source.html#l00032">32</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a58942ac25a3280f4f4a3a98e9b1573d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58942ac25a3280f4f4a3a98e9b1573d1">&#9670;&nbsp;</a></span>Out_Min</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PID_Controller::Out_Min = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>输出限幅，一般取本级PID执行器负向最大输出 </p>
+
+<p class="definition">在文件 <a class="el" href="pid__controller_8h_source.html">pid_controller.h</a> 第 <a class="el" href="pid__controller_8h_source.html#l00033">33</a> 行定义.</p>
+
+</div>
+</div>
+<a id="adf3f3379511e27219bb9b085f21c10c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf3f3379511e27219bb9b085f21c10c2">&#9670;&nbsp;</a></span>Position_Integ_Term</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PID_Controller::Position_Integ_Term[3] = {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>位置式PID积分项储存器，0脚标位置储存输入项累加值，1脚标为本次积分项，2脚标为上次积分项 </p>
+
+<p class="definition">在文件 <a class="el" href="pid__controller_8h_source.html">pid_controller.h</a> 第 <a class="el" href="pid__controller_8h_source.html#l00040">40</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>D:/Test/PID_Controller/<a class="el" href="pid__controller_8h_source.html">pid_controller.h</a></li>
+<li>D:/Test/PID_Controller/<a class="el" href="pid__controller_8cpp_source.html">pid_controller.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

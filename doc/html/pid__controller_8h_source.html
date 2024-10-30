@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PID_Controller: D:/Test/PID_Controller/pid_controller.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PID_Controller
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">PID_controller_lib</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.20 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">D:/Test/PID_Controller/pid_controller.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="pid__controller_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef PID_CONTROLLER_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define PID_CONTROLLER_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_p_i_d___controller__global_8h.html">PID_Controller_global.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_p_i_d___controller.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="_p_i_d___controller__global_8h.html#a1fe38f3fb5bccd6b746dc09596ea9936">PID_CONTROLLER_EXPORT</a> <a class="code" href="class_p_i_d___controller.html">PID_Controller</a></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="class_p_i_d___controller.html">PID_Controller</a>(<span class="keywordtype">double</span> KP,<span class="keywordtype">double</span> KI,<span class="keywordtype">double</span> KD,<span class="keywordtype">double</span> KFF,<span class="keywordtype">double</span> KFFB,<span class="keywordtype">double</span> KFF_A,<span class="keywordtype">double</span> KFFB_B,<span class="keywordtype">double</span> Integral_Max,<span class="keywordtype">double</span> Integral_Min,<span class="keywordtype">double</span> Output_Max,<span class="keywordtype">double</span> Output_Min);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_p_i_d___controller.html">PID_Controller</a>(<span class="keywordtype">double</span> KP,<span class="keywordtype">double</span> KI,<span class="keywordtype">double</span> KD,<span class="keywordtype">double</span> Integral_Max,<span class="keywordtype">double</span> Integral_Min,<span class="keywordtype">double</span> Output_Max,<span class="keywordtype">double</span> Output_Min); </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">void</span> Clear();</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">double</span> Incremental_PID(<span class="keywordtype">double</span> Input,<span class="keywordtype">double</span> Feedback); </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">double</span> Incremental_PID(<span class="keywordtype">double</span> Input,<span class="keywordtype">double</span> Feedback,<span class="keywordtype">double</span> Differential_Error); </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">double</span> Position_PID(<span class="keywordtype">double</span> Input,<span class="keywordtype">double</span> Feedback); </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">double</span> Position_PID(<span class="keywordtype">double</span> Input,<span class="keywordtype">double</span> Feedback,<span class="keywordtype">double</span> Differential_Error); </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">double</span> Set_Output(<span class="keywordtype">double</span> Output);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_p_i_d___controller.html#a0707633a63d01277e5198c017f4a2e04">   21</a></span>&#160;    <span class="keywordtype">double</span> Kp = 0;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_p_i_d___controller.html#afb06b9ff3e4ee73f7cefd51d715e1ac2">   22</a></span>&#160;    <span class="keywordtype">double</span> Ki = 0;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_p_i_d___controller.html#aa2032fb8ff7e041bfad4f5fd0830101e">   23</a></span>&#160;    <span class="keywordtype">double</span> Kd = 0;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_p_i_d___controller.html#a69657b040d8ad1a3f1642ff50ef1a9fe">   24</a></span>&#160;    <span class="keywordtype">double</span> Kff = 0; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_p_i_d___controller.html#a9873dae8ffedf237a4eead227a5d62d9">   25</a></span>&#160;    <span class="keywordtype">double</span> Kffb = 0; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_p_i_d___controller.html#ad2dd7c8ccda2200077eebc1af96f21de">   26</a></span>&#160;    <span class="keywordtype">double</span> Kff_Alpha = 0; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_p_i_d___controller.html#a8a7dcaf582e039489fa82dd1f232f469">   27</a></span>&#160;    <span class="keywordtype">double</span> Kffb_Beta = 0; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_p_i_d___controller.html#a459b6a537e6809a7e0f0f312c1f9c64c">   29</a></span>&#160;    <span class="keywordtype">double</span> Integ_Max = 0; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_p_i_d___controller.html#ad14666a5564a4c3c99b91b5ed5c42f8c">   30</a></span>&#160;    <span class="keywordtype">double</span> Integ_Min = 0; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_p_i_d___controller.html#a80ea87861bccb7b64d78de53dfd693db">   32</a></span>&#160;    <span class="keywordtype">double</span> Out_Max = 0;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_p_i_d___controller.html#a58942ac25a3280f4f4a3a98e9b1573d1">   33</a></span>&#160;    <span class="keywordtype">double</span> Out_Min = 0;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_p_i_d___controller.html#ac3d9bc4c7d890931d0f5b43b1ab29ac1">   37</a></span>&#160;    <span class="keywordtype">double</span> Err[3] = {0}; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_p_i_d___controller.html#a1fe716c21ccd0440bf793ea2babf1ddb">   38</a></span>&#160;    <span class="keywordtype">double</span> In[3] = {0}; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_p_i_d___controller.html#a9a60205b8b0a5e61659e87fee27faf3c">   39</a></span>&#160;    <span class="keywordtype">double</span> Fb[3] = {0}; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_p_i_d___controller.html#adf3f3379511e27219bb9b085f21c10c2">   40</a></span>&#160;    <span class="keywordtype">double</span> Position_Integ_Term[3] = {0}; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_p_i_d___controller.html#ab0a49a7058eaffdf83091d3d2eedb62a">   41</a></span>&#160;    <span class="keywordtype">double</span> Diff_Term[3] = {0}; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_p_i_d___controller.html#adea3e0ca4a0bf8f949f0accb3c15234a">   42</a></span>&#160;    <span class="keywordtype">double</span> Ff_Term[3] = {0}; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_p_i_d___controller.html#a73ab9d2c698f0035bc2a5f482ae7154d">   43</a></span>&#160;    <span class="keywordtype">double</span> Ffb_Term[3] = {0}; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_p_i_d___controller.html#a991d202e3546ce2633292b70d06e2f7c">   45</a></span>&#160;    <span class="keywordtype">double</span> Out = 0;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_p_i_d___controller.html#a3f54c77b17f8c615cc5eb950b0ac01dc">   46</a></span>&#160;    <span class="keywordtype">double</span> Delta_Out = 0;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif // PID_CONTROLLER_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_p_i_d___controller_html"><div class="ttname"><a href="class_p_i_d___controller.html">PID_Controller</a></div><div class="ttdef"><b>Definition:</b> <a href="pid__controller_8h_source.html#l00006">pid_controller.h:7</a></div></div>
+<div class="ttc" id="a_p_i_d___controller__global_8h_html"><div class="ttname"><a href="_p_i_d___controller__global_8h.html">PID_Controller_global.h</a></div></div>
+<div class="ttc" id="a_p_i_d___controller__global_8h_html_a1fe38f3fb5bccd6b746dc09596ea9936"><div class="ttname"><a href="_p_i_d___controller__global_8h.html#a1fe38f3fb5bccd6b746dc09596ea9936">PID_CONTROLLER_EXPORT</a></div><div class="ttdeci">#define PID_CONTROLLER_EXPORT</div><div class="ttdef"><b>Definition:</b> <a href="_p_i_d___controller__global_8h_source.html#l00009">PID_Controller_global.h:9</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>
